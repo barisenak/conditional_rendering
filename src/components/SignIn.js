@@ -1,14 +1,16 @@
-import "./App.css";
+import "../App.css";
 import React from "react";
 
-class App extends React.Component {
+class SignIn extends React.Component {
   state = {
     isSignedIn: false,
   };
 
   change = () => {
-    this.setState({ isSignedIn: true });
-    setTimeout(this.change, 3000);
+    const func = () => {
+      this.setState({ isSignedIn: true });
+    };
+    setTimeout(func, 3000);
   };
 
   render() {
@@ -20,4 +22,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default SignIn;
