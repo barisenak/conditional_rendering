@@ -8,6 +8,7 @@ import Cursive from "./Cursive";
 import ChangeState from "./ChangeState";
 import SquareSet from "./SquareSet";
 import RenderingWithConditions from "./RenderingWithConditions";
+import HookSetState from "./HookSetState";
 
 class Router extends Component {
   render() {
@@ -34,6 +35,9 @@ class Router extends Component {
           </Link>
           <Link className="nav_item" to="/7">
             7
+          </Link>
+          <Link className="nav_item" to="/8">
+            8
           </Link>
         </nav>
 
@@ -64,6 +68,10 @@ class Router extends Component {
 
           <Route path="/7">
             <RenderingWithConditions />
+          </Route>
+
+          <Route path="/8">
+            <HookSetState />
           </Route>
 
           <Route path="/">
